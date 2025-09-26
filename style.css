@@ -1,0 +1,443 @@
+.nav-link.hoverable {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+  color: white !important; /* keeps text visible on dark background */
+}
+
+.nav-link.hoverable:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center,
+              rgba(255, 255, 255, 0.35) 0%,
+              rgba(255, 255, 255, 0) 80%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link.hoverable:hover, .nav-link.hoverable:focus {
+  transform: translateY(-5px);
+  color: #ffffff !important; /* Bootstrap’s primary blue */
+}
+
+.nav-link.hoverable:hover:before, .nav-link.hoverable:focus:before {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.bg-dark{
+  background-color: black !important;
+}
+
+/* Phones (portrait + small screens) */
+/* Mobile navbar styling */
+@media (max-width: 576px) {
+  .custom-navbar {
+    display: flex !important;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.162) !important; /* glass background */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.059);
+    padding: 6px 10px;
+    margin: 20px auto 0 auto; /* 20px from top, centered */
+    width: calc(100% - 50px); /* small side margin */
+    z-index: 1050;
+  }
+
+  .custom-navbar .navbar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .custom-navbar .nav-link {
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: color 0.3s ease; /* hover affects text only */
+  }
+
+  .custom-navbar .nav-link:hover {
+    color: #00d4ff !important;
+  }
+}
+
+
+/* Tablets (landscape + medium screens) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .custom-navbar .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .custom-navbar .nav-item {
+    flex: 1 0 50%; /* two items per row */
+    text-align: center;
+  }
+}
+
+
+
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+
+
+/*everything below here is just setting up the page, so dont worry about it */
+
+@media (min-width: 768px) {
+  .navbar{
+    text-align: center !important;
+    float: none;
+    display: inline-block;
+  }
+}
+
+body {
+  background-color: rgba(0,0,0,1);
+  font-weight:600;
+  text-align:center !important;
+  color: white;
+}
+
+nav {
+  background: none !important;
+  text-transform: uppercase;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+nav li a {
+  transition: .5s color ease-in-out;
+}
+
+
+.page-title {
+  opacity: .75 !important;
+}
+
+
+.home {
+  background-image: url("./assets/images/Main-Background.jpg");
+  background-size: cover;       /* makes image cover full area */
+  background-position: center;  /* centers image */
+  background-repeat: no-repeat; /* prevents tiling */
+  height: 100vh;                /* full viewport height */
+  width: 100%;                  /* full width */
+  background-attachment: fixed;
+}
+
+.my-container{
+  text-align: start;
+}
+
+.impulse-name {
+  display: flex;
+  font-size: 52px;
+  gap: 16px;
+  font-weight: 700;
+  flex-wrap: wrap; /* prevents overflow on small screens */
+}
+
+#impulse-name-main {
+  color: red !important;
+}
+
+#impulse-tagline {
+  color: aqua !important;
+}
+
+.impulse-main-para {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.front-btn-main {
+  text-align: center;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .impulse-name {
+    font-size: 36px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .impulse-main-para {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #btn-main-home-sec {
+    justify-content: center;
+  }
+
+  .my-container {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+
+#btn-main-home-sec{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.challenge {
+  padding: 60px 0;
+  background-image: url("./assets/images/Earth image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Glass effect stays same */
+.glass-box {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;          /* ensures content flows inside */
+  flex-direction: column; /* stack children vertically */
+}
+
+
+/* Headings */
+#challenge-section h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 1.5px 1.5px 3px black;
+}
+
+/* Paragraph */
+#challenge-para {
+  font-size: 110%;
+  text-align: justify;
+  text-shadow: 1.3px 1.3px 2px black;
+  line-height: 150%;
+}
+
+/* Simulation controls */
+.simulation-container p {
+  text-shadow: 1px 1px 2px black;
+}
+
+.simulation-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.simulation-output {
+  text-shadow: 1px 1px 2px black;
+}
+
+
+/* Custom Selector CSS */
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(3, 255, 255);
+}
+
+
+/* .custom-footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  border-top: 2px solid #444;
+}
+
+.custom-footer .footer-heading {
+  color: #00d4ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.custom-footer ul li {
+  margin-bottom: 0.4rem;
+}
+
+.custom-footer a:hover {
+  color: #00d4ff !important;
+  text-decoration: underline;
+}
+
+.footer-text-aligner{
+  text-align: start;
+} */
+/* Footer container */
+.custom-footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  border-top: 2px solid #444;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 10;
+  padding: 50px 0 30px 0;
+}
+
+/* Footer headings */
+.custom-footer .footer-heading {
+  color: #00d4ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+/* Footer text */
+.custom-footer .footer-text-aligner {
+  text-align: start;
+  font-size: 0.9rem;
+}
+
+/* Footer links */
+.custom-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-footer a:hover {
+  color: #00d4ff;
+  text-decoration: underline;
+}
+
+/* Visual bars between sections */
+.footer-bar {
+  width: 4px;
+  background: linear-gradient(to bottom, #00d4ff, #ff00ff);
+  margin: 0 40px;
+  border-radius: 4px;
+}
+
+/* Members dropdown */
+#team-members-select {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(20, 20, 20, 0.85);
+  color: #fff;
+  text-shadow: 0 0 2px black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#team-members-select option {
+  color: #000;
+  background: #fff;
+  text-shadow: none;
+}
+
+/* Footer horizontal line */
+.custom-footer hr {
+  border-color: rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
+}
+
+/* Bottom copyright */
+.custom-footer .text-center {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+/* Footer responsive adjustments for mobile (row layout preserved) */
+@media (max-width: 768px) {
+  .custom-footer {
+    padding: 30px 10px; /* scale down padding */
+    font-size: 0.85rem; /* scale down text */
+  }
+
+  .custom-footer .col-md-4 {
+    flex: 1 1 auto; /* keep row layout */
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  /* Scale down visual bars */
+  .footer-bar {
+    width: 3px;
+    height: 40px; /* smaller height for mobile */
+    margin: 0 15px;
+  }
+
+  /* Scale down select dropdown */
+  #team-members-select {
+    font-size: 0.85rem;
+    padding: 4px 6px;
+  }
+
+  /* Adjust designation text */
+  #designation {
+    font-size: 0.8rem;
+  }
+}
+
+.custom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

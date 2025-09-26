@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactor-2025</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand bg-dark fixed-top custom-navbar">
+            <div class="container-fluid justify-content-center">
+                <ul class="navbar-nav flex-row flex-wrap justify-content-center w-100">
+                    <li class="nav-item flex-fill text-center mx-0">
+                        <a id="len1" class="nav-link hoverable" href="#home-section">Home</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center mx-0">
+                        <a id="len2" class="nav-link hoverable" href="#asteroids-section">Explore</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center mx-0">
+                        <a id="len3" class="nav-link hoverable" href="#members-section">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- sections -->
+
+    <!-- Home -->
+    <section class="home" id="home-section">
+        <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <div class="col-12 col-md-8 col-lg-5 offset-md-1 my-container">
+                    <div class="impulse-name flex-wrap">
+                        <span id="impulse-name-main">IMPulse:</span>
+                        <span id="impulse-tagline">Feel it!</span>
+                    </div>
+                    <div class="impulse-main-para mt-3">
+                        Our goal is to develop a tool to visualize and mitigate the threat of
+                        near-Earth asteroids using real NASA and USGS data.
+                    </div>
+                    <div id="btn-main-home-sec">
+                        <a class="btn btn-outline-light front-btn-main mt-3" href="#asteroids-section" role="button">Go
+                            to Asteroids</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Challanges -->
+    <section class="challenge" id="challenge-section">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Left Content -->
+                <div class="col-12 col-md-6 d-flex">
+                    <div class="challenge-content glass-box w-100">
+                        <h2>The Challenge: Impactor-2025</h2>
+                        <p id="challenge-para">
+                            A newly identified near-Earth asteroid, "Impactor-2025," poses a potential threat.
+                            Do we have the tools to enable the public and decision-makers to understand and
+                            mitigate its risks? Our challenge is to develop an interactive visualization and
+                            simulation tool that uses real data to help users model asteroid impact scenarios,
+                            predict consequences, and evaluate potential mitigation strategies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Simulation -->
+                <div class="col-12 col-md-6 d-flex">
+                    <div class="simulation-container glass-box w-100">
+                        <h2>Explore the Asteroid Threat</h2>
+                        <p>
+                            Use the simulator below to model a potential impact scenario.
+                            Adjust the asteroid's size and velocity to see the estimated effects.
+                        </p>
+
+                        <div class="simulation-controls">
+                            <label for="size-input">Asteroid Mass (kg):</label>
+                            <input type="number" id="size-input" class="form-control" placeholder="ex. 500">
+
+                            <label for="velocity-input">Velocity (km/s):</label>
+                            <input type="number" id="velocity-input" class="form-control" placeholder="ex. 15">
+
+                            <button type="button" class="btn btn-outline-light mt-2" id="simulate-btn">
+                                Simulate Impact
+                            </button>
+                        </div>
+
+                        <div id="simulation-output" class="simulation-output mt-3">
+                            <p>Adjust the parameters and click "Simulate Impact" to see the results.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Asteroids -->
+    <section class="" id="asteroids-section">
+
+    </section>
+
+    <!-- About -->
+    <section class="" id="members-section">
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="custom-footer text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div style="display: flex;">
+                    <!-- Team Info -->
+                    <div class="col-md-4 mb-4">
+                        <h4 class="footer-heading">Team IMPulse</h4>
+                        <p class="small footer-text-aligner">Challenge: <strong>Meteor-Madness</strong></p>
+                    </div>
+
+                    <!-- Visual Bar -->
+                    <div class="footer-bar" id="footer-bar-1"></div>
+
+                    <!-- Members Dropdown -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="footer-heading">Team Members</h5>
+                        <select class="form-select small footer-text-aligner" id="team-members-select"
+                            aria-label="Team Members">
+                            <option title="FullStack Developer, 3D Animation,API Integration">Arnab Biswas</option>
+                            <option title="UX/UI, Frontend Developer">Rajdeep Das</option>
+                            <option title="Presentation Maker, Communication">Arya Kundu</option>
+                            <option title=" Researcher">Sayantani</option>
+                            <option title="UX/UI">Proloy Mondal</option>
+                        </select>
+                    </div>
+
+                    <!-- Visual Bar -->
+                    <div class="footer-bar" id="footer-bar-2"></div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <h6>Designation:- <Span id="designation">XXXXXX</Span></h6>
+                    </div>
+                </div>
+                <!-- Contact -->
+                <div class="col-md-4 mb-4 custom">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="small footer-text-aligner">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=das.rajdeepofficial2007@gmail.com"
+                            target="_blank" class="text-decoration-none text-light">
+                            das.rajdeepofficial2007@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-secondary">
+
+            <div class="text-center small mt-3">
+                © 2025 IMPulse – All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
