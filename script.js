@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamDesignations = {
         "Arnab Biswas": "FullStack Developer, 3D Animation,API Integration",
         "Rajdeep Das": "UX/UI, Frontend Developer",
-        "Arya Kundu": "Presentation Maker, Communication",
+        "Arya Kundu": "PPT-designer.",
         "Sayantani": "Researcher",
-        "Prolay Mondal": "UX/UI"
+        "Prolay Mondal": "UX/UI-designer"
     };
 
     // Get the select element and the span
@@ -52,3 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
