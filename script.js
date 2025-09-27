@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamDesignations = {
         "Arnab Biswas": "FullStack Developer, 3D Animation,API Integration",
         "Rajdeep Das": "UX/UI, Frontend Developer",
-        "Arya Kundu": "PPT-designer.",
+        "Arya Kundu": "Presentation Maker, Communication",
         "Sayantani": "Researcher",
-        "Prolay Mondal": "UX/UI-designer"
+        "Prolay Mondal": "UX/UI"
     };
 
     // Get the select element and the span
@@ -50,6 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Estimated Crater Size:</strong> ~${craterSize.toFixed(1)} km in diameter</p>
         `;
     });
-
 });
-

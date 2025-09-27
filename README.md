@@ -1,2 +1,1 @@
-# IMPulse_Landing_Page
-Will be edited soon...
+# IMPulse_Landing_Page-3.0-
